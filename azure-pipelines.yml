@@ -1,9 +1,4 @@
   - task: AzurePowerShell@5
     inputs:
       azureSubscription: '${{ parameters.ArmConnection }}'
-      ScriptType: 'InlineScript'
-      azurePowerShellVersion: '2.6.0'
-      Inline: |
-      $Pwd = ConvertTo-SecureString -String '1234' -Force -AsPlainText
-      $Base64 = 'MI..............3000.characters.here............M+wICB9A='
-      Import-AzKeyVaultCertificate -VaultName '${{ parameters.resourceGroupName }}''-my-keyvault' -Name ccg-self-signed-cert -CertificateString $Base64 -Password $Pwd
+      
