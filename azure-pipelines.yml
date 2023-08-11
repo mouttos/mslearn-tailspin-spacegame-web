@@ -1,3 +1,4 @@
+steps:  
   - task: AzurePowerShell@5
     inputs:
       azureSubscription: '${{ parameters.ArmConnection }}'
