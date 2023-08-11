@@ -1,3 +1,9 @@
-pool: MyAgentPool
-steps:
-- bash: echo hello world
+steps:  
+# npm v1
+# Install and publish npm packages, or run an npm command. Supports npmjs.com and authenticated registries like Azure Artifacts.
+- task: Npm@1
+  inputs:
+    command: 'install' # 'ci' | 'install' | 'publish' | 'custom'. Required. Command. Default: install.
+    
+
+      
